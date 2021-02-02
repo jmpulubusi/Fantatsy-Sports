@@ -19,7 +19,7 @@ class SearchBar extends Component {
   handleChange = (e) => {
     const replace = e.target.value.split(" ").join("_");
     if (replace.length > 0) {
-      this.setState({ playerName: replace });
+      this.setState({ ...this.state, playerName: replace });
     }
   };
 
@@ -39,8 +39,8 @@ class SearchBar extends Component {
 
         this.getPlayerStats(res.data.data[0].id)
         this.getPlayerGames(res.data.data[0].id)
-        this.setState({ playerTeam: res.data.data[0].team });
-        this.setState({ player: res.data.data[0] });
+        this.setState({ ...this.state, playerTeam: res.data.data[0].team });
+        this.setState({ ...this.state ,player: res.data.data[0] });
       })
       .catch((err) => {
         console.log(err);
@@ -53,6 +53,7 @@ class SearchBar extends Component {
       )
       .then(async (res) => {
         this.setState({ playerGames: res.data.data });
+        console.log(res.data.data)
       })
       .catch((err) => {
         console.log(err);

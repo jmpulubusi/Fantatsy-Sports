@@ -1,13 +1,13 @@
-import StatTable from './components/StatTable/StatTable'
-import SearchBar from './components/SearchBar/SearchBar'
 
+import SearchBar from './components/SearchBar/SearchBar'
+import React from 'react'
 import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className='App'>
     <SearchBar></SearchBar>
-    
+  
     </div>
   );
 }

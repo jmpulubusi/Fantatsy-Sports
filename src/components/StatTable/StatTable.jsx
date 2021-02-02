@@ -1,10 +1,11 @@
 import React from "react";
-import * as ReactBootStrap from "react-bootstrap";
 
-function StatTable({ stats }) {
+import "./StatTable.scss";
+
+const StatTable = ({ stats, games, player }) => {
   return (
     <div>
-      <ReactBootStrap.Table class='table table-striped table-dark'>
+      <table className='table '>
         <thead>
           <tr>
             <th scope='col'>Season</th>
@@ -56,9 +57,9 @@ function StatTable({ stats }) {
             <th scope='col'>{Math.round(stats.ft_pct * 100)}</th>
           </tr>
         </tbody>
-      </ReactBootStrap.Table>
+      </table>
     </div>
   );
-}
+};
 
 export default StatTable;
