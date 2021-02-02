@@ -4,9 +4,9 @@ import LineChart from "../LineChart/LineChart";
 import TeamCard from "../TeamCard/TeamCard.jsx";
 
 import "./PlayerCard.scss";
-
-
+// where individual player card is render based on query in search bar
 function PlayerCard({ stats, team, games, player }) {
+  // the const take the indivudal points ast reb etc from all games played and returns them as total sum of each category
   const totalPoints = games.reduce(function (tot, arr) {
     return tot + arr.pts;
   }, 0);
@@ -36,7 +36,7 @@ function PlayerCard({ stats, team, games, player }) {
   const totalTo = games.reduce(function (tot, arr) {
     return tot + arr.turnover;
   }, 0);
-
+// formula that caculates total fantasy points
   const fantasyTotal =
     totalFgm3 * 3 +
     totalFgm2 * 2 +
@@ -48,7 +48,7 @@ function PlayerCard({ stats, team, games, player }) {
     totalTo;
 
   const [playerCard, setPlayerCard] = useState([]);
- 
+// sets player to teamcard and return the array
   const addPlayer = () => {
     setPlayerCard([
       ...playerCard,
@@ -69,8 +69,9 @@ function PlayerCard({ stats, team, games, player }) {
       },
     ]);
   };
-  const removePlayer = id => {
-    const removedArr = [...playerCard].filter(player => player.id !== id);
+  // removes player from team array
+  const removePlayer = (id) => {
+    const removedArr = [...playerCard].filter((player) => player.id !== id);
 
     setPlayerCard(removedArr);
   };
@@ -94,7 +95,7 @@ function PlayerCard({ stats, team, games, player }) {
 
       <StatTable stats={stats} player={player} games={games}></StatTable>
       <LineChart games={games} player={player}></LineChart>
-
+      <h1>My Team</h1>
       {playerCard.map((card) => (
         <TeamCard
           id={card.id}
@@ -111,7 +112,6 @@ function PlayerCard({ stats, team, games, player }) {
           playerFgm3={card.playerFgm3}
           playerTo={card.playerTo}
           playerFantasy={card.playerFantasy}
-          
         ></TeamCard>
       ))}
     </div>

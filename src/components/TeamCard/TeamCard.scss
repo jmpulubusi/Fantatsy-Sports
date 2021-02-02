@@ -1,11 +1,10 @@
-.team{
-   position: relative;
-    font-size: .75em;
-    display: flex;
-    
-    justify-content: space-around;
-    
- 
+.team {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-   
+  &__fantasy {
+    color: #15c924;
+  }
 }

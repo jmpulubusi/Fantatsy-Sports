@@ -1,11 +1,12 @@
 import React from "react";
 
+import Table from 'react-bootstrap/Table'
 import "./StatTable.scss";
 
-const StatTable = ({ stats, games, player }) => {
+const StatTable = ({ stats,}) => {
   return (
     <div>
-      <table className='table '>
+      <Table className=' '>
         <thead>
           <tr>
             <th scope='col'>Season</th>
@@ -57,7 +58,7 @@ const StatTable = ({ stats, games, player }) => {
             <th scope='col'>{Math.round(stats.ft_pct * 100)}</th>
           </tr>
         </tbody>
-      </table>
+      </Table>
     </div>
   );
 };

@@ -1,0 +1,10 @@
+@import "../../styles/partials/variable";
+@import "../../styles/partials/mixins";
+.searchBar {
+  margin: auto;
+  &__title {
+    color: orange;
+    margin-bottom: 10px;
+  }
+ 
+}
