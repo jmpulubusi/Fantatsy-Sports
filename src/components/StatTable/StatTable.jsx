@@ -1,9 +1,9 @@
 import React from "react";
 
-import Table from 'react-bootstrap/Table'
+import Table from "react-bootstrap/Table";
 import "./StatTable.scss";
 
-const StatTable = ({ stats,}) => {
+const StatTable = ({ stats }) => {
   return (
     <div>
       <Table className=' '>
@@ -30,7 +30,6 @@ const StatTable = ({ stats,}) => {
             <th scope='col'>FG%</th>
             <th scope='col'>FG3%</th>
             <th scope='col'>Ft%</th>
-            <th scope='col'>FPts</th>
           </tr>
         </thead>
         <tbody>

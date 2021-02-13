@@ -18,9 +18,8 @@ const TeamCard = ({
 }) => {
   return (
     <div className='team' id={id} key={id}>
-      
       <h2>
-        Player Name:
+        Player Name
         <br></br>
         {playerName}
       </h2>

@@ -36,7 +36,7 @@ function PlayerCard({ stats, team, games, player }) {
   const totalTo = games.reduce(function (tot, arr) {
     return tot + arr.turnover;
   }, 0);
-// formula that caculates total fantasy points
+  // formula that caculates total fantasy points
   const fantasyTotal =
     totalFgm3 * 3 +
     totalFgm2 * 2 +
@@ -48,7 +48,7 @@ function PlayerCard({ stats, team, games, player }) {
     totalTo;
 
   const [playerCard, setPlayerCard] = useState([]);
-// sets player to teamcard and return the array
+  // sets player to teamcard and return the array
   const addPlayer = () => {
     setPlayerCard([
       ...playerCard,

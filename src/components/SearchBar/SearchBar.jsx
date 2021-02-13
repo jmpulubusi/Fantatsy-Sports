@@ -84,7 +84,7 @@ class SearchBar extends Component {
   render() {
     return (
       <div className='searchBar'>
-        <h1 className='searchBar__title'>Jay's Nba Tracker</h1>
+        <h1 className='searchBar__title'>NBA Tracker</h1>
         <form onSubmit={this.handleSubmit} className='searchBar__form'>
           <label>
             <input
