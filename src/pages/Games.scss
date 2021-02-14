@@ -1,0 +1,16 @@
+.games {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 0% 7%;
+ 
+  &__nav {
+    display: flex;
+    justify-content: center;
+    border-radius: 7px;
+    border: solid 1px black;
+    width: 500px;
+    margin-bottom: 5%;
+    background-color: #ffff ;
+ }
+}

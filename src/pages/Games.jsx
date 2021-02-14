@@ -3,6 +3,8 @@ import moment from "moment";
 import axios from "axios";
 import GamesCard from "../components/GamesCard/GamesCard";
 
+import "./Games.scss";
+
 const API = "https://www.balldontlie.io/api/v1/games?dates[]=";
 const currentDate = moment().format("YYYY-MM-DD");
 const Games = () => {
@@ -53,9 +55,12 @@ const Games = () => {
   }
   return (
     <div>
-      <h1>Games</h1>
-      <button onClick={nextDate}>+</button>
-      <button onClick={lastDate}>-</button>
+      <h1 className='games'>Games</h1>
+      <div className='games__nav'>
+        <button onClick={lastDate} className=''>-</button>
+        <h3>{moment(date).format("MMMM Do YYYY")}</h3>
+        <button onClick={nextDate}>+</button>
+      </div>
       {loading && <p>Loading...</p>}
       {!loading &&
         games.map((content) => (
@@ -67,6 +72,8 @@ const Games = () => {
             visitorTeam={content.visitor_team}
             status={content.status}
             time={content.time}
+           homeLogo={content.home_team.abbreviation}
+           visitorLogo={content.visitor_team.abbreviation}
             id={content.id}
           ></GamesCard>
         ))}

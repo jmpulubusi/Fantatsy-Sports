@@ -1,6 +1,14 @@
-.games {
+.game {
   display: flex;
   justify-content: space-between;
   width: 500px;
-  padding: 5%;
-}
+  margin-bottom: 10%;
+  height: 130px;
+  border-radius: 7px;
+  border: solid 1px black;
+  padding: 2% 5%;
+  background-color: #fff;
+  &__logo{
+    height: 50px;
+    width: 50px;
+} }
