@@ -1,0 +1,48 @@
+.calander {
+  border: 1px solid black;
+  border-radius: 5px;
+  &__header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #051c2d;
+    color: white;
+    margin: auto;
+  }
+}
+.day {
+  border: 0.5px solid lightgrey;
+  padding-top: 1px;
+  font-size: 1.2em;
+  &__names {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+    background-color:rgb(231, 151, 1);
+    color: white;
+    text-transform: capitalize;
+  }
+}
+
+.calander .day {
+  display: inline-block;
+  background-color: #fff;
+  height: 44px;
+  width: calc(100% / 7);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 1;
+  text-align: center;
+}
+.selected {
+  background-color: #051c2d;
+  color: #fff;
+  margin: auto;
+  height: 100%;
+}
+
+.today {
+  background-color: rgb(172, 172, 172);
+  margin: auto;
+  height: 100%;
+}

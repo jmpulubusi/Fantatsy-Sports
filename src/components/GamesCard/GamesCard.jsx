@@ -17,7 +17,7 @@ export default function Gamescard({
     <div key={id} className='game'>
       <div>
         <img
-          src={nba.getTeamLogoURLs(homeLogo)[0]}
+          src={nba.getTeamLogoURLs(homeLogo)[1]}
           alt='TeamLogo'
           className='game__logo'
         />
